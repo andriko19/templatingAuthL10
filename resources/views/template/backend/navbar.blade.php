@@ -340,7 +340,16 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Account Setting</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Logout</a>
+                {{-- <a class="dropdown-item" href="{{ route('logout') }}">Logout</a> --}}
+                <!-- start form logout -->
+                <form method="POST" action="{{ route('logout') }}" >
+                    @csrf
+                    <button type="submit" class="dropdown-item">
+                        <i class="bx bx-power-off me-2"></i>
+                        <span class="align-middle">Log Out</span>
+                    </button>
+                </form>
+                <!-- end form logout -->
               </li>
             </div>
           </ul>
